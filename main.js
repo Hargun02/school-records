@@ -1,3 +1,4 @@
+// Defining classes
 class Address {
     constructor(num, street, pincode) {
         this.num = num;
@@ -43,3 +44,9 @@ let school = {
     address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075),
     students: []
 }
+
+// Getting data from form
+
+// Storing data in localStorage
+
+// Showing data
