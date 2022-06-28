@@ -26,6 +26,16 @@ class Student {
     class;
     subjects = [];
     dateOfBirth;
+    id;
+}
+
+class Subject {
+    constructor(name, maxMarks) {
+        this.name = name;
+        this.maxMarks = maxMarks;
+    }
+    marks = null;
+    percentage = this.marks/this.maxMarks;
 }
 
 let school = {
