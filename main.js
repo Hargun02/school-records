@@ -18,7 +18,18 @@ class Name {
     }
 }
 
+class Student {
+    constructor(name, gradYear) {
+        this.name = name;
+        this.gradYear = gradYear;
+    }
+    class;
+    subjects = [];
+    dateOfBirth;
+}
+
 let school = {
     name: "Sri Venkateshwar International School",
-    address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075)
+    address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075),
+    students: []
 }
