@@ -10,6 +10,14 @@ class Address {
     address = `${num}, ${street}, ${city}, ${state}, ${country}, ${pincode}`;
 }
 
+class Name {
+    constructor(firstName, lastName, middleName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName ?? '';
+    }
+}
+
 let school = {
     name: "Sri Venkateshwar International School",
     address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075)
