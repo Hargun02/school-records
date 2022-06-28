@@ -10,7 +10,6 @@ class Address {
     address = `${num}, ${street}, ${city}, ${state}, ${country}, ${pincode}`;
 }
 
-
 let school = {
     name: "Sri Venkateshwar International School",
     address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075)
