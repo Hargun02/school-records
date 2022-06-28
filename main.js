@@ -8,7 +8,7 @@ class Address {
         this.country = "India";
         this.pincode = pincode;
     }
-    address = `${num}, ${street}, ${city}, ${state}, ${country}, ${pincode}`;
+    address = `${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.country}, ${this.pincode}`;
 }
 
 class Name {
