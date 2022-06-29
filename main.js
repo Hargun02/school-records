@@ -40,8 +40,8 @@ class Subject {
 }
 
 let school = {
-    name: "Sri Venkateshwar International School",
-    address: new Address("Sri Venkateshwar International School", "Sector 18A, Dwarka", 110075),
+    name: null,
+    address: new Address(this.name, null, null),
     students: []
 }
 
