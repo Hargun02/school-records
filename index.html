@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Records</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="student-data.css"> <!--from https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css-->
 </head>
 <body>
     <form action="" id="studentData">
-        <label for="firstName"></label>
-        <input type="text" id="firstName">
+        <h1>Student Records</h1>
+        <section>
+            <h2>Personal Details</h2>
+            <p>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </p>
+
+            <p>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </p>
+        </section>
     </form>
 </body>
 </html>
