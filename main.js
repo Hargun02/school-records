@@ -34,3 +34,7 @@ const state = form.state;
 const pincode = form.pincode;
 
 const grade = form.grade;
+
+function fetchValues() {
+    return new Student(new Name(firstName.textContent, lastName.textContent, middleName.textContent), birthDate.value, grade.value);
+}
