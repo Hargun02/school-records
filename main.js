@@ -21,3 +21,16 @@ class Student {
     }
     subjects = [];
 }
+
+const firstName = form.firstName;
+const lastName = form.lastName;
+const middleName = form.middleName;
+const birthDate = form.birthDate;
+
+const houseNum = form.houseNum;
+const streetName = form.streetName;
+const city = form.city;
+const state = form.state;
+const pincode = form.pincode;
+
+const grade = form.grade;
