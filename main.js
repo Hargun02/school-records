@@ -3,7 +3,7 @@ let school = localStorage.getItem('school') ?? {
     students: [],
 }
 
-form = document.querySelector('student-data')
+form = document.querySelector('#student-data')
 
 class Name {
     constructor(firstName, lastName, middleName) {
@@ -39,11 +39,17 @@ function fetchValues() {
     return new Student(new Name(firstName.textContent, lastName.textContent, middleName.textContent), birthDate.value, grade.value);
 }
 
+function updateView(student) {
+    for (let name in student.name) console.log(name);
+    for (let key in student) {
+        console.log(key);
+    }
+}
 
 function onSubmit() {
     form.preventDefault;
-    fetchValues();
-    updateView();
+    let student = fetchValues();
+    updateView(student);
 }
 
 form.addEventListener('submit', () => {
