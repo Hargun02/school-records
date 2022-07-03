@@ -1,5 +1,5 @@
 // Defining classes
-class Address {
+/* class Address {
     constructor(num, street, pincode) {
         this.num = num;
         this.street = street;
@@ -43,10 +43,11 @@ let school = {
     name: null,
     address: new Address(this.name, null, null),
     students: []
-}
+} */
 
 // Getting data from form
 
 // Storing data in localStorage
 
 // Showing data
+
