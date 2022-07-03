@@ -52,7 +52,4 @@ function onSubmit() {
     updateView(student);
 }
 
-form.addEventListener('submit', () => {
-    submit.preventDefault(); 
-    onSubmit()
-});
+form.addEventListener('submit', function(event){event.preventDefault()})
