@@ -38,3 +38,18 @@ const grade = form.grade;
 function fetchValues() {
     return new Student(new Name(firstName.textContent, lastName.textContent, middleName.textContent), birthDate.value, grade.value);
 }
+
+function updateView() {
+    
+}
+
+function onSubmit() {
+    form.preventDefault;
+    fetchValues();
+    updateView();
+}
+
+form.addEventListener('submit', () => {
+    submit.preventDefault(); 
+    onSubmit()
+});
