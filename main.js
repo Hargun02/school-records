@@ -36,7 +36,7 @@ const pincode = form.pincode;
 const grade = form.grade;
 
 function fetchValues() {
-    return new Student(new Name(firstName.textContent, lastName.textContent, middleName.textContent), birthDate.value, grade.value);
+    return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value);
 }
 
 function updateView(student) {
