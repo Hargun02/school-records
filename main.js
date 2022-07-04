@@ -1,5 +1,5 @@
 // Defining the main object
-let school = JSON.parse(localStorage.getItem('school')) ?? {
+let school = JSON.parse(localStorage.getItem('school')) || {
     name: null,
     students: [],
 }
