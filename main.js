@@ -14,7 +14,9 @@ class Address {
         this.country = "India";
         this.pincode = pincode;
     }
-    address = `${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.pincode}`;
+    address() {
+    return(`${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.pincode}`);
+    }
 }
 
 class Name {
@@ -23,7 +25,9 @@ class Name {
         this.lastName = lastName;
         this.middleName = middleName ?? '';
     }
-    name = `${this.firstName} ${(this.middleName + ' ') || ''}${this.lastName}`
+    name() {
+        return(`${this.firstName} ${(this.middleName + ' ') || ''}${this.lastName}`);
+    }
 }
 
 class Student {
