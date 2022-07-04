@@ -5,6 +5,18 @@ let school = localStorage.getItem('school') ?? {
 
 form = document.querySelector('#student-data')
 
+class Address {
+    constructor(num, street, pincode) {
+        this.num = num;
+        this.street = street;
+        this.city = "New Delhi";
+        this.state = "Delhi";
+        this.country = "India";
+        this.pincode = pincode;
+    }
+    address = `${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.pincode}`;
+}
+
 class Name {
     constructor(firstName, lastName, middleName) {
         this.firstName = firstName;
@@ -14,10 +26,11 @@ class Name {
 }
 
 class Student {
-    constructor(name, birthDate, grade) {
+    constructor(name, birthDate, grade, address) {
         this.name = name;
         this.birthDate = birthDate;
         this.grade = grade;
+        this.address = address;
     }
     subjects = [];
 }
