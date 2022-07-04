@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', updateView());
 
 const resetBtn = document.querySelector('#reset-data');
 
-resetBtn.addEventListener('click', () =>{
+resetBtn.addEventListener('click', () => {
     resetData();
     updateView();
 });
@@ -130,5 +130,8 @@ function saveData() {
 }
 
 function resetData() {
-    localStorage.removeItem('school');
+    school = {
+        name: null,
+        students: [],
+    }
 }
