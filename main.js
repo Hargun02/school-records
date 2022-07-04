@@ -89,6 +89,10 @@ form.addEventListener('submit', event => {
 });
 
 document.addEventListener('DOMContentLoaded', updateView());
+
+const resetBtn = document.querySelector('#reset-data');
+
+resetBtn.addEventListener('click', resetData());
 // updateView helper functions
 function createTable() {
     const tr = document.createElement('tr');
@@ -119,4 +123,8 @@ function resetTable() {
 
 function saveData() {
     localStorage.setItem('school', JSON.stringify(school));
+}
+
+function resetData() {
+    localStorage.removeItem('school');
 }
