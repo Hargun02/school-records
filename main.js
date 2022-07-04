@@ -14,9 +14,7 @@ class Address {
         this.city = city;
         this.state = state;
         this.pincode = pincode;
-    }
-    address() {
-    return(`${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.pincode}`);
+        this.address = `${this.num}, ${this.street}, ${this.city}, ${this.state}, ${this.pincode}`;
     }
 }
 
@@ -25,9 +23,7 @@ class Name {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
-    }
-    name() {
-        return(`${this.firstName} ${this.middleName ? this.middleName + ' ': ''}${this.lastName}`);
+        this.name = `${this.firstName} ${this.middleName ? this.middleName + ' ': ''}${this.lastName}`;
     }
 }
 
@@ -69,10 +65,10 @@ function updateView() {
     createTable();
     for(let student of school.students) {
         const tr = document.createElement('tr');
-        tr.appendChild(createData(student.name.name()));
+        tr.appendChild(createData(student.name.name));
         tr.appendChild(createData(student.grade));
         tr.appendChild(createData(student.birthDate));
-        tr.appendChild(createData(student.address.address()));
+        tr.appendChild(createData(student.address.address));
         
         tbody.appendChild(tr);
     }
