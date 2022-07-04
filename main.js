@@ -23,6 +23,7 @@ class Name {
         this.lastName = lastName;
         this.middleName = middleName ?? '';
     }
+    name = `${this.firstName} ${(this.middleName + ' ') || ''}${this.lastName}`
 }
 
 class Student {
@@ -55,7 +56,7 @@ function fetchValues() {
 }
 
 function updateView() {
-    
+
 }
 
 function onSubmit() {
