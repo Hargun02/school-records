@@ -88,6 +88,7 @@ form.addEventListener('submit', event => {
     onSubmit()
 });
 
+document.addEventListener('DOMContentLoaded', updateView());
 // updateView helper functions
 function createTable() {
     const tr = document.createElement('tr');
