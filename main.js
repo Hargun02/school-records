@@ -54,16 +54,13 @@ function fetchValues() {
     return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value, new Address(houseNum.value, streetName.value, city.value, state.value, pincode.value));
 }
 
-function updateView(student) {
-    for (let name in student.name) console.log(name);
-    for (let key in student) {
-        console.log(key);
-    }
+function updateView() {
+    
 }
 
 function onSubmit() {
-    let student = fetchValues();
-    updateView(student);
+    school.students.push(fetchValues());
+    updateView();
 }
 
 form.addEventListener('submit', event => {
