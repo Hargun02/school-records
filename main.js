@@ -48,6 +48,8 @@ const pincode = form.pincode;
 
 const grade = form.grade;
 
+const table = document.querySelector('#records')
+
 function fetchValues() {
     return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value, new Address(houseNum.value, streetName.value, city.value, state.value, pincode.value));
 }
@@ -68,3 +70,19 @@ form.addEventListener('submit', event => {
     event.preventDefault();
     onSubmit()
 });
+
+function createTable() {
+    const tr = document.createElement('tr');
+    tr.appendChild(createHeading("Name"));
+    tr.appendChild(createHeading("Grade"));
+    tr.appendChild(createHeading("Date of Birth"))
+    tr.appendChild(createHeading("Address"));
+
+    table.appendChild(tr);
+}
+
+function createHeading(heading) {
+    const th = document.createElement('th');
+    th.textContent = heading;
+    return th;
+}
