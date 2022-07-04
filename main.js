@@ -23,10 +23,10 @@ class Name {
     constructor(firstName, lastName, middleName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.middleName = middleName ?? '';
+        this.middleName = middleName;
     }
     name() {
-        return(`${this.firstName} ${(this.middleName + ' ') || ''}${this.lastName}`);
+        return(`${this.firstName} ${this.middleName ? this.middleName + ' ': ''}${this.lastName}`);
     }
 }
 
