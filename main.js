@@ -8,12 +8,11 @@ form = document.querySelector('#student-data')
 
 // Defining classes
 class Address {
-    constructor(num, street, pincode) {
+    constructor(num, street, city, state, pincode) {
         this.num = num;
         this.street = street;
-        this.city = "New Delhi";
-        this.state = "Delhi";
-        this.country = "India";
+        this.city = city;
+        this.state = state;
         this.pincode = pincode;
     }
     address() {
