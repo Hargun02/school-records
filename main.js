@@ -92,7 +92,11 @@ document.addEventListener('DOMContentLoaded', updateView());
 
 const resetBtn = document.querySelector('#reset-data');
 
-resetBtn.addEventListener('click', resetData());
+resetBtn.addEventListener('click', () =>{
+    resetData();
+    updateView();
+});
+
 // updateView helper functions
 function createTable() {
     const tr = document.createElement('tr');
