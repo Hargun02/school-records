@@ -81,6 +81,8 @@ function updateView() {
 function onSubmit() {
     school.students.push(fetchValues());
     updateView();
+    form.reset();
+    firstName.focus();
 }
 
 // Event listener on form
