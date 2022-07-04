@@ -56,7 +56,16 @@ function fetchValues() {
 }
 
 function updateView() {
-
+    createTable();
+    for(let student in school.students) {
+        const tr = document.createElement('tr');
+        tr.appendChild(createData(student.name));
+        tr.appendChild(createData(student.grade));
+        tr.appendChild(createData(student.birthDate));
+        tr.appendChild(createData(student.address));
+        
+        table.appendChild(tr);
+    }
 }
 
 function onSubmit() {
@@ -83,4 +92,10 @@ function createHeading(heading) {
     const th = document.createElement('th');
     th.textContent = heading;
     return th;
+}
+
+function createData(data) {
+    const td = document.createElement('td')
+    td.textContent = data;
+    return td;
 }
