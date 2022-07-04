@@ -49,7 +49,7 @@ const pincode = form.pincode;
 const grade = form.grade;
 
 function fetchValues() {
-    return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value);
+    return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value, new Address(houseNum.value, streetName.value, city.value, state.value, pincode.value));
 }
 
 function updateView(student) {
