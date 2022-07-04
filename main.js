@@ -47,9 +47,11 @@ function updateView(student) {
 }
 
 function onSubmit() {
-    form.preventDefault;
     let student = fetchValues();
     updateView(student);
 }
 
-form.addEventListener('submit', function(event){event.preventDefault()})
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    onSubmit()
+});
