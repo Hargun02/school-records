@@ -81,6 +81,7 @@ function updateView() {
 function onSubmit() {
     school.students.push(fetchValues());
     updateView();
+    saveData();
     form.reset();
     firstName.focus();
 }
@@ -117,4 +118,8 @@ function createData(data) {
 function resetTable() {
     thead.innerHTML = '';
     tbody.innerHTML = '';
+}
+
+function saveData() {
+    localStorage.setItem('school', JSON.stringify(school));
 }
