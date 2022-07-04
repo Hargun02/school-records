@@ -70,10 +70,10 @@ function updateView() {
     createTable();
     for(let student of school.students) {
         const tr = document.createElement('tr');
-        tr.appendChild(createData(student.name));
+        tr.appendChild(createData(student.name.name()));
         tr.appendChild(createData(student.grade));
         tr.appendChild(createData(student.birthDate));
-        tr.appendChild(createData(student.address));
+        tr.appendChild(createData(student.address.address()));
         
         tbody.appendChild(tr);
     }
