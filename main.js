@@ -62,6 +62,7 @@ function fetchValues() {
 }
 // Updating values to add submitted data
 function updateView() {
+    resetTable();
     createTable();
     for(let student in school.students) {
         const tr = document.createElement('tr');
@@ -104,4 +105,9 @@ function createData(data) {
     const td = document.createElement('td')
     td.textContent = data;
     return td;
+}
+
+function resetTable() {
+    thead.innerHTML = '';
+    tbody.innerHTML = '';
 }
