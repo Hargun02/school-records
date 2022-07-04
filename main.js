@@ -68,7 +68,7 @@ function fetchValues() {
 function updateView() {
     resetTable();
     createTable();
-    for(let student in school.students) {
+    for(let student of school.students) {
         const tr = document.createElement('tr');
         tr.appendChild(createData(student.name));
         tr.appendChild(createData(student.grade));
