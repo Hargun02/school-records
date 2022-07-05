@@ -88,7 +88,10 @@ form.addEventListener('submit', event => {
     onSubmit()
 });
 
-document.addEventListener('DOMContentLoaded', updateView());
+document.addEventListener('DOMContentLoaded', () => {
+    updateView();
+    firstName.focus();
+});
 
 const resetBtn = document.querySelector('#reset-data');
 
