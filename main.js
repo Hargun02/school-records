@@ -134,4 +134,5 @@ function resetData() {
         name: null,
         students: [],
     }
+    saveData();
 }
