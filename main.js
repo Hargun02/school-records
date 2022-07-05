@@ -174,13 +174,17 @@ function addCheckbox(field, value, text) {
 }
 
 function showSubjects() {
+    resetSubjects();
     let x;
-    let gradeValue = grade.value;
-    if(gradeValue === 9 || gradeValue === 10) x = juniorSubjects;
-    else if(gradeValue === 11 || gradeValue === 12) x = seniorSubjects;
+    if(grade.value == 9 || grade.value == 10) x = juniorSubjects;
+    else if(grade.value == 11 || grade.value == 12) x = seniorSubjects;
     else return;
 
     for(let subject in x) {
         subjectPicker.appendChild(addCheckbox("subjects", subject, x[subject]));
     }
+}
+
+function resetSubjects() {
+    subjectPicker.innerHTML = '';
 }
