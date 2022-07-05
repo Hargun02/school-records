@@ -156,16 +156,16 @@ function resetData() {
     saveData();
 }
 
-function addCheckbox(value, name) {
+function addCheckbox(field, value, text) {
     const checkbox = document.createElement('input');
     checkbox.type = "checkbox";
-    checkbox.id = `${value.toLowerCase()}`;
-    checkbox.name = name;
+    checkbox.id = value
+    checkbox.name = field;
     checkbox.value = value;
 
     const label = document.createElement('label');
     label.setAttribute('for', checkbox.id);
-    label.textContent = value;
+    label.textContent = text;
 
     const div = document.createElement('div');
     div.appendChild(label);
