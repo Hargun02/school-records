@@ -50,9 +50,10 @@ const state = form.state;
 const pincode = form.pincode;
 
 const grade = form.grade;
+const subjectPicker = document.querySelector('#subject-picker');
 
 const thead = document.querySelector('#records-head');
-const tbody = document.querySelector('#records-body')
+const tbody = document.querySelector('#records-body');
 
 // Getting values from form
 function fetchValues() {
@@ -99,6 +100,8 @@ resetBtn.addEventListener('click', () => {
     resetData();
     updateView();
 });
+
+grade.addEventListener('change', showSubjects());
 
 // updateView helper functions
 function createTable() {
