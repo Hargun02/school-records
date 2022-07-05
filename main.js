@@ -37,6 +37,19 @@ class Student {
     subjects = [];
 }
 
+juniorSubjects = {
+    maths: "Mathematics",
+    english: "English",
+    science: "Science",
+    socSci: "Social Sciece",
+}
+
+seniorSubjects = {
+    maths: "Mathematics",
+    english: "English",
+    physics: "Physics",
+    chem: "Chemistry",
+}
 // Adding references to form elements
 const firstName = form.firstName;
 const lastName = form.lastName;
