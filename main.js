@@ -142,3 +142,20 @@ function resetData() {
     }
     saveData();
 }
+
+function addCheckbox(value, name) {
+    const checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.id = `${value.toLowerCase()}`;
+    checkbox.name = name;
+    checkbox.value = value;
+
+    const label = document.createElement('label');
+    label.setAttribute('for', checkbox.id);
+    label.textContent = value;
+
+    const div = document.createElement('div');
+    div.appendChild(label);
+    div.appendChild(checkbox);
+    return(div);
+}
