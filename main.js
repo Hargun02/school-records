@@ -172,3 +172,15 @@ function addCheckbox(field, value, text) {
     div.appendChild(checkbox);
     return(div);
 }
+
+function showSubjects() {
+    let x;
+    let gradeValue = grade.value;
+    if(gradeValue === 9 || gradeValue === 10) x = juniorSubjects;
+    else if(gradeValue === 11 || gradeValue === 12) x = seniorSubjects;
+    else return;
+
+    for(let subject in x) {
+        subjectPicker.appendChild(addCheckbox("subjects", subject, x[subject]));
+    }
+}
