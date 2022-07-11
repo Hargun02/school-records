@@ -4,7 +4,7 @@ let school = JSON.parse(localStorage.getItem('school')) || {
     students: [],
 }
 
-form = document.querySelector('#student-data')
+const form = document.querySelector('#student-data')
 
 // Defining classes
 class Address {
@@ -35,6 +35,14 @@ class Student {
         this.address = address;
     }
     subjects = [];
+}
+
+class Subject {
+    constructor(name) {
+        this.name = name;
+    }
+    max_marks = 100;
+    marks;
 }
 
 juniorSubjects = {
@@ -70,7 +78,8 @@ const tbody = document.querySelector('#records-body');
 
 // Getting values from form
 function fetchValues() {
-    return new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value, new Address(houseNum.value, streetName.value, city.value, state.value, pincode.value));
+    const student = new Student(new Name(firstName.value, lastName.value, middleName.value), birthDate.value, grade.value, new Address(houseNum.value, streetName.value, city.value, state.value, pincode.value));
+    return student;
 }
 
 // Updating values to add submitted data
@@ -107,14 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
     firstName.focus();
 });
 
+grade.addEventListener('change', () => {
+    showSubjects();
+})
+
 const resetBtn = document.querySelector('#reset-data');
 
 resetBtn.addEventListener('click', () => {
     resetData();
     updateView();
 });
-
-grade.addEventListener('change', showSubjects());
 
 // updateView helper functions
 function createTable() {
@@ -176,11 +187,11 @@ function addCheckbox(field, value, text) {
 function showSubjects() {
     resetSubjects();
     let x;
-    if(grade.value == 9 || grade.value == 10) x = juniorSubjects;
-    else if(grade.value == 11 || grade.value == 12) x = seniorSubjects;
+    if(grade.value == 9 || grade.value == 10) subjectArray = juniorSubjects;
+    else if(grade.value == 11 || grade.value == 12) subjectArray = seniorSubjects;
     else return;
 
-    for(let subject in x) {
+    for(let subject in subjectArray) {
         subjectPicker.appendChild(addCheckbox("subjects", subject, x[subject]));
     }
 }
